@@ -32,3 +32,11 @@ To run the Interactive Orrery Web App locally, follow these steps:
 2. Run the following command to clone the repository:
    ```bash
    git clone https://github.com/your-username/interactive-orrery.git
+3. Download three into the terminal
+   ```bash
+   npm install three
+4. Run the file
+   ```bash
+   npx vite
+   
+   
