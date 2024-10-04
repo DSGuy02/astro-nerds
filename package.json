@@ -1,0 +1,15 @@
+{
+  "name": "astronerds-solar-system",
+  "version": "1.0.0",
+  "description": "A Solar System for Astro Nerds!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Astronerds",
+  "license": "ISC",
+  "dependencies": {
+    "three": "^0.169.0",
+    "vite": "^5.4.8"
+  }
+}
