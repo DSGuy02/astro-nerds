@@ -53,10 +53,8 @@ body {
     margin: 0;
     height: 100vh; /* Use full viewport height */
     background-color: #1E3E62;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
-
-
 
 
 
