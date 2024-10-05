@@ -1,92 +1,35 @@
-.montserrat {
-    font-family: "Montserrat", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 100;
-    font-style: normal;
-}
-.montserrat-thin {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 100; /* Thin */
-}
-
-.montserrat-extrathin {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 200; /* Extra Thin */
-}
-
-.montserrat-light {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 300; /* Light */
-}
-
-.montserrat-regular {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 400; /* Regular */
-}
-
-.montserrat-medium {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 500; /* Medium */
-}
-
-.montserrat-semibold {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600; /* Semi Bold */
-}
-
-.montserrat-bold {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700; /* Bold */
-}
-
-.montserrat-extrabold {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 800; /* Extra Bold */
-}
-
-.montserrat-black {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 900; /* Black */
-}
-
 body {
     margin: 0;
-    height: 100vh; /* Use full viewport height */
-    background-color: #1E3E62;
-    /* overflow: hidden; */
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    overflow: hidden;
 }
-
-
-
-.solar-container {
-    position: relative; /* Ensure positioned elements are relative to this container */
-    width: 50vw; /* Take half the width of the viewport */
-    height: 100vh; /* Take the full height of the viewport */
-    padding: 50px; /* Add some padding */
-    background-color: none; /* Optional: Background color */
-    min-height: 100vh;
+.container {
+    font-size: 6px;
+    width: 40em;
+    height: 40em;
+    position: relative;
 }
-
-img {
+img{
     height: 130%;
     width: 130%;
 }
-
 .sun {
     display: flex;
     align-items: center;
     justify-content: center;
     position: absolute;
-    top: 50%; /* Center vertically */
-    left: 50%; /* Center horizontally */
-    transform: translate(-50%, -50%); /* Adjust for centering */
+    top: 15em;
+    left: 15em;
     width: 10em;
     height: 10em;
     border-radius: 50%;
     box-shadow: 0 0 3em rgb(255, 128, 0);
-    /* animation: orbit 50s linear infinite; */
+    animation: orbit 50s linear infinite;
 }
-
 .mercury,
 .venus,
 .earth,
@@ -102,9 +45,7 @@ img {
     border-color: white transparent transparent transparent;
     border-width: 0.1em 0.1em 0 0;
     border-radius: 50%;
-    z-index: 0;
 }
-
 .mercury {
     top: 12.5em;
     left: 12.5em;
@@ -198,7 +139,7 @@ img {
     right: 0.8em;
     width: 2em;
     height: 2em;
-    background-image: url('../assets/index_images/mercury.png');
+    background-image: url('./assets/index_images/mercury.png');
     background-size: cover;
 }
 .venus::before {
@@ -206,7 +147,7 @@ img {
     right: 2em;
     width: 2em;
     height: 2em;
-    background-image: url('../assets/index_images/venus.png');
+    background-image: url('./assets/index_images/venus.png');
     background-size: cover;
 }
 .earth::before {
@@ -214,7 +155,7 @@ img {
     right: 0em;
     width: 5em;
     height: 5em;
-    background-image: url('../assets/index_images/earth.png');
+    background-image: url('./assets/index_images/earth.png');
     background-size: cover;
 }
 
@@ -223,7 +164,7 @@ img {
     right: 0.2em;
     width: 1.2em;
     height: 1.2em;
-    background-image: url('../assets/index_images/moon.png');
+    background-image: url('./assets/index_images/moon.png');
     background-size: cover;
 }
 .mars::before {
@@ -231,7 +172,7 @@ img {
     right: 3em;
     width: 3em;
     height: 3em;
-    background-image: url('../assets/index_images/mars.png');
+    background-image: url('./assets/index_images/mars.png');
     background-size: cover;
 }
 .jupiter::before {
@@ -239,7 +180,7 @@ img {
     right: 3em;
     width: 5em;
     height: 5em;
-    background-image: url('../assets/index_images/jupiter.png');
+    background-image: url('./assets/index_images/jupiter.png');
     background-size: cover;
 }
 .saturn::before {
@@ -247,7 +188,7 @@ img {
     right: 5em;
     width: 4.5em;
     height: 4.5em;
-    background-image: url('../assets/index_images/saturn.png');
+    background-image: url('./assets/index_images/saturn.png');
     background-size: cover;
 }
 .uranus::before {
@@ -255,7 +196,7 @@ img {
     right: 6.5em;
     width: 4em;
     height: 4em;
-    background-image: url('../assets/index_images/uranus.png');
+    background-image: url('./assets/index_images/uranus.png');
     background-size: cover;
 }
 .neptune::before {
@@ -263,7 +204,7 @@ img {
     right: 8em;
     width: 4em;
     height: 4em;
-    background-image: url('../assets/index_images/neptune.png');
+    background-image: url('./assets/index_images/neptune.png');
     background-size: cover;
 }
 .pluto::before {
@@ -271,7 +212,7 @@ img {
     right: 10em;
     width: 4em;
     height: 4em;
-    background-image: url('../assets/index_images/pluto.png');
+    background-image: url('./assets/index_images/pluto.png');
     background-size: cover;
 }
 
@@ -286,32 +227,4 @@ img {
     to {
         transform: rotate(360deg);
     }
-}
-
-@keyframes move {
-    from {
-        transform: translateY(0);
-    }
-    to {
-        transform: translateY(-100vh); 
-    }
-}
-
-.text-hover {
-    transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition for scaling and color */
-    display: inline-block; /* Allows scaling to work properly */
-    text-decoration: none; /* Remove underline */
-    color: inherit; /* Inherit text color */
-    z-index: 1;
-    position: relative;
-}
-
-.text-hover:hover {
-    transform: scale(2); /* Enlarge the text to 120% on hover */
-    color: #6A9AB0; /* Optional: Change color on hover for better visibility */
-}
-
-.text-column {
-    position: relative; /* Allow z-index to work for this container */
-    z-index: 1; /* Higher z-index to ensure it appears in front */
 }
