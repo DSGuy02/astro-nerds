@@ -368,3 +368,51 @@ img {
     padding-right: 10px;
 }
 
+.cont {
+    background-color: #EAD8B1;
+            color: #001F3F;
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            margin: 20px 0; /* Add vertical spacing between containers */
+            width: 100%; /* Make the container full width */
+            max-width: 800px; /* Limit max width for larger screens */
+            text-align: center;
+           
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            opacity: 0; /* Start hidden */
+            transform: translateY(20px); /* Start slightly below */
+            visibility: hidden; /* Hide initially */
+}
+
+.cont:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.cont.visible {
+    opacity: 1; /* Fully visible */
+    transform: translateY(0); /* Move to original position */
+    visibility: visible; /* Make visible */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Animation on reveal */
+}
+
+.glass{
+    background: rgba(255, 255, 255, 0.11);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5.7px);
+-webkit-backdrop-filter: blur(5.7px);
+
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column; /* Stack containers vertically */
+    justify-content: space-around;
+    width: 100%;
+    align-items: center;
+    position: relative; /* Allow z-index to work for this container */
+    z-index: 1; /* Higher z-index to ensure it appears in front */
+}
+
