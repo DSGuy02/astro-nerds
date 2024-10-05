@@ -1,93 +1,72 @@
-/* body {
-    margin: 0;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: black;
-    overflow: hidden;
+.montserrat {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
 }
-.container {
-    font-size: 6px;
-    width: 40em;
-    height: 40em;
-    position: relative;
-}
-img{
-    height: 130%;
-    width: 130%;
-}
-.sun {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    top: 15em;
-    left: 15em;
-    width: 10em;
-    height: 10em;
-    border-radius: 50%;
-    box-shadow: 0 0 3em rgb(255, 128, 0);
-    animation: orbit 50s linear infinite;
-} */
-
-/* body {
-    margin: 0;
-    height: 100vh;
-    background-color: black;
-    overflow: hidden;
+.montserrat-thin {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 100; /* Thin */
 }
 
-.container {
-    font-size: 6px;
-    width: 40em;
-    height: 40em;
-    position: relative;
+.montserrat-extrathin {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 200; /* Extra Thin */
 }
 
-img {
-    height: 130%;
-    width: 130%;
+.montserrat-light {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300; /* Light */
 }
 
-.sun {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    top: 15em;
-    left: 15em;
-    width: 10em;
-    height: 10em;
-    border-radius: 50%;
-    box-shadow: 0 0 3em rgb(255, 128, 0);
-    animation: orbit 50s linear infinite;
-} */
+.montserrat-regular {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400; /* Regular */
+}
+
+.montserrat-medium {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500; /* Medium */
+}
+
+.montserrat-semibold {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600; /* Semi Bold */
+}
+
+.montserrat-bold {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700; /* Bold */
+}
+
+.montserrat-extrabold {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800; /* Extra Bold */
+}
+
+.montserrat-black {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900; /* Black */
+}
 
 body {
     margin: 0;
     height: 100vh; /* Use full viewport height */
-    background-color: black;
+    background-color: #1E3E62;
     overflow: hidden;
 }
 
-.container {
-    font-size: 6px;
-    height: 100%; /* Change to 100% width to use full width of the parent */
-    width: 40%; /* Set height to 40% for the solar system */
-    position: relative;
-    display: flex; /* Use flexbox to center content */
-    align-items: center; /* Center vertically */
-    justify-content: center; /* Center horizontally */
-}
 
-.hero {
-    width: 60%; /* Set height to 60% for the hero section */
-    display: flex; /* Use flexbox for centering */
-    align-items: center; /* Center vertically */
-    justify-content: center; /* Center horizontally */
-    color: white; /* Text color */
-    font-size: 2em; /* Adjust font size for the hero text */
+
+
+
+.solar-container {
+    position: relative; /* Ensure positioned elements are relative to this container */
+    width: 50vw; /* Take half the width of the viewport */
+    height: 100vh; /* Take the full height of the viewport */
+    padding: 50px; /* Add some padding */
+    background-color: none; /* Optional: Background color */
+    min-height: 100vh;
 }
 
 img {
@@ -100,14 +79,16 @@ img {
     align-items: center;
     justify-content: center;
     position: absolute;
-    top: 15em; /* You might need to adjust this for better alignment */
-    left: 15em; /* You might need to adjust this for better alignment */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust for centering */
     width: 10em;
     height: 10em;
     border-radius: 50%;
     box-shadow: 0 0 3em rgb(255, 128, 0);
-    animation: orbit 50s linear infinite;
+    /* animation: orbit 50s linear infinite; */
 }
+
 .mercury,
 .venus,
 .earth,
@@ -123,7 +104,9 @@ img {
     border-color: white transparent transparent transparent;
     border-width: 0.1em 0.1em 0 0;
     border-radius: 50%;
+    z-index: 0;
 }
+
 .mercury {
     top: 12.5em;
     left: 12.5em;
@@ -312,6 +295,78 @@ img {
         transform: translateY(0);
     }
     to {
-        transform: translateY(-100vh); /* Moves the star upwards */
+        transform: translateY(-100vh); 
     }
 }
+
+.text-hover {
+    transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition for scaling and color */
+    display: inline-block; /* Allows scaling to work properly */
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit text color */
+    z-index: 1;
+    position: relative;
+}
+
+.text-hover:hover {
+    transform: scale(2); /* Enlarge the text to 120% on hover */
+    color: #6A9AB0; /* Optional: Change color on hover for better visibility */
+}
+
+.text-column {
+    position: relative; /* Allow z-index to work for this container */
+    z-index: 1; /* Higher z-index to ensure it appears in front */
+}
+
+/* navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px;
+    background-color: none;
+    position: relative; /* Allow z-index to work for this container */
+    z-index: 1; /* Higher z-index to ensure it appears in front */
+}
+
+.titlehome, .middle a, .profile {
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    color: #EAD8B1;;
+    text-align: center;
+    text-decoration: none;
+    padding: 14px 16px;
+}
+
+.titlehome {
+    font-size: 30px;
+}
+
+.middle {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+.middle a {
+    margin: 0 10px;
+}
+
+.profile {
+    font-size: 23px;
+}
+
+.titlehome, .middle a, .profile {
+    color: #EAD8B1;; 
+    text-decoration: none; 
+}
+
+.titlehome:hover, .middle a:hover, .profile:hover {
+    color: #6A9AB0; 
+}
+
+#userIcon{
+    padding-right: 10px;
+}
+
