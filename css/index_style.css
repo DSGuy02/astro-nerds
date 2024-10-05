@@ -198,7 +198,7 @@ img {
     right: 0.8em;
     width: 2em;
     height: 2em;
-    background-image: url('../assets/index_images/mercury.png');
+    background-image: url('../assets/2d_interactive/mercury.png');
     background-size: cover;
 }
 .venus::before {
@@ -206,7 +206,7 @@ img {
     right: 2em;
     width: 2em;
     height: 2em;
-    background-image: url('../assets/index_images/venus.png');
+    background-image: url('../assets/2d_interactive/venus.png');
     background-size: cover;
 }
 .earth::before {
@@ -214,7 +214,7 @@ img {
     right: 0em;
     width: 5em;
     height: 5em;
-    background-image: url('../assets/index_images/earth.png');
+    background-image: url('../assets/2d_interactive/earth.png');
     background-size: cover;
 }
 
@@ -223,7 +223,7 @@ img {
     right: 0.2em;
     width: 1.2em;
     height: 1.2em;
-    background-image: url('../assets/index_images/moon.png');
+    background-image: url('../assets/2d_interactive/moon.png');
     background-size: cover;
 }
 .mars::before {
@@ -231,7 +231,7 @@ img {
     right: 3em;
     width: 3em;
     height: 3em;
-    background-image: url('../assets/index_images/mars.png');
+    background-image: url('../assets/2d_interactive/mars.png');
     background-size: cover;
 }
 .jupiter::before {
@@ -239,7 +239,7 @@ img {
     right: 3em;
     width: 5em;
     height: 5em;
-    background-image: url('../assets/index_images/jupiter.png');
+    background-image: url('../assets/2d_interactive/jupiter.png');
     background-size: cover;
 }
 .saturn::before {
@@ -247,7 +247,7 @@ img {
     right: 5em;
     width: 4.5em;
     height: 4.5em;
-    background-image: url('../assets/index_images/saturn.png');
+    background-image: url('../assets/2d_interactive/saturn.png');
     background-size: cover;
 }
 .uranus::before {
@@ -255,7 +255,7 @@ img {
     right: 6.5em;
     width: 4em;
     height: 4em;
-    background-image: url('../assets/index_images/uranus.png');
+    background-image: url('../assets/2d_interactive/uranus.png');
     background-size: cover;
 }
 .neptune::before {
@@ -263,7 +263,7 @@ img {
     right: 8em;
     width: 4em;
     height: 4em;
-    background-image: url('../assets/index_images/neptune.png');
+    background-image: url('../assets/2d_interactive/neptune.png');
     background-size: cover;
 }
 .pluto::before {
@@ -271,7 +271,7 @@ img {
     right: 10em;
     width: 4em;
     height: 4em;
-    background-image: url('../assets/index_images/pluto.png');
+    background-image: url('../assets/2d_interactive/pluto.png');
     background-size: cover;
 }
 
