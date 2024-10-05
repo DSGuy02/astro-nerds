@@ -38,5 +38,3 @@ To run the Interactive Orrery Web App locally, follow these steps:
 4. Run the file
    ```bash
    npx vite
-   
-   
