@@ -6,11 +6,27 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
     <link rel="stylesheet" href="./css/3d_interactive_style.css">
+    <link rel="stylesheet" href="./css/navbar.css">
     <link rel="icon" href="./assets/3d_interactive/icon.png">
 </head>
 
 <body>
-    <!-- threjs canvas -->
+    <nav class="navbar" style="position: fixed; top: 0px; z-index: 2;">
+        <a class="titlehome">AstroNerds</a>
+
+        <div class="middle">
+            <a class="secondary" href="team.html">About Us</a>
+            <a class="secondary" href="">Orrery</a>
+            <a class="secondary" href="">Learn More</a>
+        </div>
+        
+        <a class="profile" href="#">
+            2<img src="./assets/index_images/fire.png" style="width: 30px;"/>
+            <!-- <i class="fa-regular fa-circle-user" id="userIcon"></i>Account -->
+        </a>
+    </nav>
+
+    <!-- three.js canvas -->
     <canvas id="canvas"></canvas>
 
     <!-- The Modal -->
