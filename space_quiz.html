@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Quiz</title>
+        <link rel="stylesheet" href="./css/quiz_style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="mainquiz">
+            <!-- Quiz levels section -->
+            
+            <div class="quizlevel" id="quiz-levels">
+                <h1 id="level-title">Broaden Your Galactic Trivia</h1>
+                <a href="#" id="beginner-level">Beginner</a>
+                <a href="#" id="intermediate-level">Intermediate</a>
+                <a href="#" id="advanced-level">Advanced</a>
+            </div>
+
+            <!-- Quiz questions section (hidden initially) -->
+            <div class="app" id="quiz-container" style="display: none;">
+                
+                <div class="quiz">
+                    <h2 id="question">Question</h2>
+                    <div id="answer-buttons" class="answer-buttons">
+                        <button class="btn">a1</button>
+                        <button class="btn">a2</button>
+                        <button class="btn">a3</button>
+                        <button class="btn">a4</button>
+                    </div>
+                    <button id="next-btn">Next</button>
+                </div>
+            </div>
+        </div>
+        <script src="./js/2d_interactive/quizScript.js"></script>
+    </body>
+</html>
