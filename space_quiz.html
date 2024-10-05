@@ -2,23 +2,40 @@
 <html>
     <head>
         <title>Quiz</title>
+        <link rel="icon" href="./assets/3d_interactive/icon.png">
         <link rel="stylesheet" href="./css/quiz_style.css">
+        <link rel="stylesheet" href="./css/navbar.css">
+        <link rel="stylesheet" href="./css/index_style.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     </head>
-    <body>
-        <div class="mainquiz">
-            <!-- Quiz levels section -->
+    <body background="./assets/2d_interactive/star-particles.gif">
+        <nav class="navbar">
+            <a class="titlehome">AstroNerds</a>
+    
+            <div class="middle">
+                <a class="secondary" href="team.html">About Us</a>
+                <a class="secondary" href="">Orrery</a>
+                <a class="secondary" href="">Learn More</a>
+            </div>
             
-            <div class="quizlevel" id="quiz-levels">
+            <a class="profile" href="#">
+                2<img src="./assets/index_images/fire.png" style="width: 30px;"/>
+                <!-- <i class="fa-regular fa-circle-user" id="userIcon"></i>Account -->
+            </a>
+        </nav>
+        <div class="mainquiz">
+            <div class="quizmenu" id="quiz-menu">
+                <div id="quiz-date" class="quiz-date"></div> 
                 <h1 id="level-title">Broaden Your Galactic Trivia</h1>
-                <a href="#" id="beginner-level">Beginner</a>
-                <a href="#" id="intermediate-level">Intermediate</a>
-                <a href="#" id="advanced-level">Advanced</a>
+                <div class="quizlevel" id="quiz-levels">
+                    <a href="#" id="beginner-level">Beginner</a>
+                    <a href="#" id="intermediate-level">Intermediate</a>
+                    <a href="#" id="advanced-level">Advanced</a>
+                </div>
             </div>
 
-            <!-- Quiz questions section (hidden initially) -->
             <div class="app" id="quiz-container" style="display: none;">
                 
                 <div class="quiz">
