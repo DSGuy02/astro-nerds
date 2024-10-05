@@ -16,16 +16,18 @@
 </head>
 
 <body style="background-color: #001F3F; color: #EAD8B1;" class="montserrat">
- 
+
     <nav class="navbar">
-        <a class="titlehome">AstroNerds</a>
+        <a class="titlehome">AstroNerds
+            <link rel="icon" href="./assets/3d_interactive/icon.png">
+        </a>
 
         <div class="middle">
             <a class="secondary" href="team.html">About Us</a>
             <a class="secondary" href="">Orrery</a>
             <a class="secondary" href="">Learn More</a>
         </div>
-        
+
         <a class="profile" href="#">
             2<img src="./assets/index_images/fire.png" style="width: 30px;"/>
             <!-- <i class="fa-regular fa-circle-user" id="userIcon"></i>Account -->
@@ -35,7 +37,7 @@
         <div class="row">
             <div class="col">
                 <div class="solar-container ">
-                    
+
                     <div class="sun">
                         <img src="./assets/2d_interactive/sun.png" alt="sun">
                     </div>
@@ -52,38 +54,110 @@
                     <div class="pluto"></div>
                 </div>
             </div>
-            
-                <div class="col text-column d-flex flex-column justify-content-center text-center">
-                    <div class="">
-                    <h1 class="text-start"><strong>THE ORRERY</strong></h1>
-                    <p class="montserrat-medium text-start">Your Journey Through the Solar System: 2D, 3D, and Beyond
-                    </p>
-                    <div class="row text-start">
-                        <div class="col fs-6 montserrat-bold ">
-                            <a href="2d_interactive.html" class="text-hover mainBtn">2D</a>
-                        </div>
-                        <div class="col fs-6 montserrat-bold">
-                            <a href="3d_interactive.html" class="text-hover">3D</a>
-                        </div>
-                        <div class="col fs-6 montserrat-bold ">
-                            <a href="#" class="text-hover mainBtn">VR</a>
+            <div class="col d-flex  flex-column justify-content-center text-center ">
+                <div class=" text-column  ">
+                    <div >
+                        <h1 class="text-start"><strong>THE ORRERY</strong></h1>
+                        <p class="montserrat-medium text-start">Your Journey Through the Solar System: 2D, 3D, and Beyond
+                        </p>
+                        <div class="row text-start">
+                            <div class="col fs-6 montserrat-bold ">
+                                <a href="2d_interactive.html" class="text-hover mainBtn">2D</a>
+                            </div>
+                            <div class="col fs-6 montserrat-bold">
+                                <a href="3d_interactive.html" class="text-hover">3D</a>
+                            </div>
+                            <div class="col fs-6 montserrat-bold ">
+                                <a href="#" class="text-hover mainBtn">VR</a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+
+            
         </div>
-        <div>
-          <div>
-            <h1>1</h1>
-          </div>
-          <div>
-            <h1>2</h1>
-          </div>
-          <div>
-            <h1>3</h1>
-          </div>
+
+
+        <div class="wrapper mt-5">
+            <div class="cont text-start">
+                <h1>2D Orrery: The Solar System at Your Fingertips</h1>
+                <p>
+                    Real-time planetary data based on NASA's latest updates. <br>
+                    Dynamic visualizations of orbits and planetary rotations. <br>
+                    Ideal for educators and students looking for a quick overview of space. <br>
+                    Accessible from any device—laptops, tablets, or mobile!
+                </p>
+            </div>
+
+            <div class="cont text-start">
+                <h1>3D Orrery: Immersive Learning in Three Dimensions</h1>
+                <p>
+                    High-quality 3D renderings of planets, moons, and more. <br>
+                    Customizable views to explore planetary systems from any perspective. <br>
+                    Interactive learning: Click on planets to access detailed data, information, and fun facts. <br>
+                    Ideal for users who want more control over their exploration. <br>
+                    Cross-platform compatibility for desktop and mobile browsers.
+                </p>
+            </div>
+
+            <div class="cont text-start">
+                <h1>VR Orrery: Experience Space Like Never Before</h1>
+                <p>
+                    Full virtual reality immersion into the solar system's vastness. <br>
+                    Interactive planets and moons: Get up close and personal with each celestial body. <br>
+                    Realistic planetary orbits and dynamic solar movements. <br>
+                    Perfect for VR headsets such as Oculus, HTC Vive, and more. <br>
+                    A truly engaging way to learn and experience the solar system for all ages.
+                </p>
+            </div>
         </div>
     </div>
+
+    <script>
+        // Function to check if an element is in the viewport
+        function isElementInViewport(el) {
+            const rect = el.getBoundingClientRect();
+            return (
+                rect.top >= 0 &&
+                rect.left >= 0 &&
+                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            );
+        }
+
+        // Function to handle scroll events
+        function handleScroll() {
+            const containers = document.querySelectorAll('.cont');
+            containers.forEach((container, index) => {
+                if (isElementInViewport(container)) {
+                    // Add the class to trigger the animation
+                    container.classList.add('visible');
+                }
+            });
+        }
+
+        function createStars() {
+            const container = document.querySelector("body");
+            for (let i = 0; i < 1000; i++) {
+                // Increase the number of stars to 1000
+                const star = document.createElement("div");
+                star.className = "star";
+                star.style.width = ".1px";
+                star.style.height = ".1px";
+                star.style.top = Math.random() * 100 + "%";
+                star.style.left = Math.random() * 100 + "%";
+                container.appendChild(star);
+            }
+        }
+        createStars();
+
+        // Add event listener for scroll events
+        window.addEventListener('scroll', handleScroll);
+        // Call handleScroll on initial load
+        handleScroll();
+    </script>
+
 </body>
 
 </html>
