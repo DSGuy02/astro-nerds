@@ -1,56 +1,59 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Solar System</title>
-        <link rel=stylesheet href="./css/2d_interactive.css">
-        <link rel="stylesheet" href="./css/navbar.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-        <style>
-          .date-time {
+
+<head>
+    <title>Solar System</title>
+    <link rel=stylesheet href="./css/2d_interactive.css">
+    <link rel="stylesheet" href="./css/navbar.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <style>
+        .date-time {
             font-family: 'Montserrat', sans-serif;
-              position: fixed;
-              bottom: 0;
-              left: 0;
-              right: 0;
-              text-align: center;
-              padding: 30px;
-              background-color: rgba(0, 0, 0, 0.5);
-              color: #EAD8B1;
-              font-size: 16px;
-              font-weight: 700;
-          }
-          .bottom-image {
-                width: 50px; 
-                margin-top: 10px;
-            }
-      </style>
-    </head>
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            text-align: center;
+            padding: 30px;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #EAD8B1;
+            font-size: 16px;
+            font-weight: 700;
+        }
 
-    <body background="./assets/2d_interactive/star-particles.gif">
-        <nav class="navbar" style="position: fixed; top: 13px; width: 100%;">
-            <a class="titlehome" href="index.html">AstroNerds</a>
+        .bottom-image {
+            width: 50px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
 
-            <div class="middle">
-                <a class="secondary" href="team.html">About Us</a>
-                <a class="secondary" href="">Orrery</a>
-                <a class="secondary" href="">Learn More</a>
-            </div>
-            
-            <a class="profile" href="#">
-                2<img src="./assets/index_images/fire.png" style="width: 30px;"/>
-                <!-- <i class="fa-regular fa-circle-user" id="userIcon"></i>Account -->
-            </a>
-        </nav>
+<body background="./assets/2d_interactive/star-particles.gif">
+    <nav class="navbar" style="position: fixed; top: 13px; width: 100%;">
+        <a class="titlehome" href="index.html">AstroNerds</a>
+
+        <div class="middle">
+            <a class="secondary" href="team.html">About Us</a>
+            <a class="secondary" href="3d_interactive.html">Orrery</a>
+            <a class="secondary" href="space_quiz.html">Learn More</a>
+        </div>
+
+        <a class="profile" href="#">
+            2<img src="./assets/index_images/fire.png" style="width: 30px;" />
+            <!-- <i class="fa-regular fa-circle-user" id="userIcon"></i>Account -->
+        </a>
+    </nav>
     <div class="container">
         <div class="sun">
-        <img src="./assets/2d_interactive/sun.png" alt="sun">
+            <img src="./assets/2d_interactive/sun.png" alt="sun">
         </div>
         <div class="mercury"></div>
         <div class="venus"></div>
         <div class="earth">
-        <div class="moon"></div>
+            <div class="moon"></div>
         </div>
         <div class="mars" onclick=""></div>
         <div class="jupiter"></div>
@@ -61,17 +64,18 @@
         </div>
     </div>
     <div class="date-time" id="date-time">
-    <img src="./assets/2d_interactive/date-line.png"  class="bottom-image"></div>
-        <script>
-            function updateDateTime() {
-                const now = new Date();
-                const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-                const formattedDate = now.toLocaleDateString('en-US', options);
-                const formattedTime = now.toLocaleTimeString('en-US');
-                document.getElementById('date-time').innerHTML = `${formattedDate} | ${formattedTime}`;
-            }
-            setInterval(updateDateTime, 1000);
-        </script>
-    </body>
+        <img src="./assets/2d_interactive/date-line.png" class="bottom-image">
+    </div>
+    <script>
+        function updateDateTime() {
+            const now = new Date();
+            const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+            const formattedDate = now.toLocaleDateString('en-US', options);
+            const formattedTime = now.toLocaleTimeString('en-US');
+            document.getElementById('date-time').innerHTML = `${formattedDate} | ${formattedTime}`;
+        }
+        setInterval(updateDateTime, 1000);
+    </script>
+</body>
 
 </html>
