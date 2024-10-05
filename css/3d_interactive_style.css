@@ -1,9 +1,13 @@
 html {
-  color: #222;
+  /* color: #222;
   font-size: 14px;
   font-weight: 400;
   line-height: 1.4;
-  font-family: "Poppins", sans-serif;
+  font-family: "Poppins", sans-serif; */
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
 }
 
 html,
@@ -80,7 +84,7 @@ body {
   font-family: system-ui;
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
+  z-index: 2; /* Sit on top */
   padding-top: 20px; /* Location of the box */
   left: 0;
   top: 0;
@@ -93,8 +97,8 @@ body {
 /* Modal Content */
 .modal-content {
   position: relative;
-  background-color: #000000f1;
-  color: white;
+  background-color: #3A6D8C;
+  color: #EAD8B1;
   margin: auto;
   padding: 0;
   border: 1px solid #888;
@@ -155,8 +159,8 @@ body {
 
 .modal-header {
   padding: 4px 16px;
-  background-color: #fefefee3;
-  color: black;
+  background-color: #EAD8B1;
+  color: #001F3F;
 }
 
 .modal-header-name {
