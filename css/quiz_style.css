@@ -44,7 +44,7 @@ body{
 }
 
 .btn:hover:not([disabled]){
-    background: #222;
+    background: #001F3F;
     color: white;
 }
 
@@ -76,7 +76,6 @@ body{
 .quizlevel {
     display: flex;
     justify-content: center; /* Centers the level boxes horizontally */
-    margin-top: 20%;
     gap: 20px; /* Space between the level boxes */
     margin-bottom: 20px;
 }
@@ -89,20 +88,31 @@ body{
     background-color: #EAD8B1;
     padding: 20px 30px; 
     border-radius: 15px; 
+    margin-top: 20px;
     border: 2px solid #e7cb8d; 
     transition: background-color 0.3s, color 0.3s; 
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .quizlevel h1{
-    display: block;
+    margin-bottom: 15%;
 }
 
 .quizlevel a:hover {
-    background-color: #feeecd; /* Darker shade of green on hover */
+    background-color: #fff8e9;
     cursor: pointer;
 }
-
+.quizmenu{
+    display: block;
+    margin-top: 16%;
+}
 .hidden {
     display: none;
+}
+.quiz-date {
+    color: #EAD8B1; /* Light color to match your theme */
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 10px; /* Spacing between the date and the title */
+    font-weight: 600;
 }

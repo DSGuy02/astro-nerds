@@ -1,31 +1,47 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>Solar System</title>
-<link rel=stylesheet href="2d.css">
-</head>
-<body>
-  <div class="container">
-    <div class="sun">
-      <img src="./assets/index_images/sun.png" alt="sun">
+    <head>
+        <title>Solar System</title>
+        <link rel=stylesheet href="./css/2d_interactive.css">
+        <link rel="stylesheet" href="./css/navbar.css">
+    </head>
+
+    <body background="./assets/2d_interactive/star-particles.gif">
+        <nav class="navbar" style="position: fixed; top: 0px;">
+            <a class="titlehome" href="index.html">AstroNerds</a>
+
+            <div class="middle">
+                <a class="secondary" href="team.html">About Us</a>
+                <a class="secondary" href="">Orrery</a>
+                <a class="secondary" href="">Learn More</a>
+            </div>
+            
+            <a class="profile" href="#">
+                2<img src="./assets/index_images/fire.png" style="width: 30px;"/>
+                <!-- <i class="fa-regular fa-circle-user" id="userIcon"></i>Account -->
+            </a>
+        </nav>
+    <div class="container">
+        <div class="sun">
+        <img src="./assets/2d_interactive/sun.png" alt="sun">
+        </div>
+        <div class="mercury"></div>
+        <div class="venus"></div>
+        <div class="earth">
+        <div class="moon"></div>
+        </div>
+        <div class="mars" onclick=""></div>
+        <div class="jupiter"></div>
+        <div class="saturn"></div>
+        <div class="uranus"></div>
+        <div class="neptune"></div>
+        <div class="pluto">
+        </div>
     </div>
-    <div class="mercury"></div>
-    <div class="venus"></div>
-    <div class="earth">
-      <div class="moon"></div>
-    </div>
-    <div class="mars" onclick=""></div>
-    <div class="jupiter"></div>
-    <div class="saturn"></div>
-    <div class="uranus"></div>
-    <div class="neptune"></div>
-    <div class="pluto">
-    </div>
-  </div>
-  <!-- <script src="script.js"></script> -->
-   <script>
-    
-   </script>
-</body>
+    <!-- <script src="script.js"></script> -->
+    <script>
+        
+    </script>
+    </body>
 
 </html>

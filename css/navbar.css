@@ -1,0 +1,52 @@
+/* navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px;
+    background-color: none;
+    position: relative; /* Allow z-index to work for this container */
+    z-index: 1; /* Higher z-index to ensure it appears in front */
+}
+
+.titlehome, .middle a, .profile {
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    color: #EAD8B1;;
+    text-align: center;
+    text-decoration: none;
+    padding: 14px 16px;
+}
+
+.titlehome {
+    font-size: 30px;
+}
+
+.middle {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+.middle a {
+    margin: 0 10px;
+}
+
+.profile {
+    font-size: 23px;
+}
+
+.titlehome, .middle a, .profile {
+    color: #EAD8B1;; 
+    text-decoration: none; 
+}
+
+.titlehome:hover, .middle a:hover, .profile:hover {
+    color: #6A9AB0; 
+}
+
+#userIcon{
+    padding-right: 10px;
+}
+

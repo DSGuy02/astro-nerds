@@ -6,7 +6,7 @@ const questions = {
                 { text: "A smaller piece of rock or ice that enters the Earth's atmosphere.", correct: false },
                 { text: "A larger rock typically found in the stretch of space between Mars and Jupiter.", correct: true },
                 { text: "An irregular ball of icy slush, frozen gases, and dark minerals found in the darkest, coldest areas of our solar system", correct: false },
-                { text: "A smaller piece of rock or ice that survives entry into Earth’s atmosphere and touches down.", correct: false }
+                { text: "A smaller piece of rock or ice that survives entry into Earth's atmosphere and touches down.", correct: false }
             ]
         },
         {
@@ -58,7 +58,7 @@ const questions = {
         {
             question: "How do scientists calculate the likelihood of a NEO colliding with Earth?",
             answers: [
-                { text: "By monitoring the object’s brightness in the sky", correct: false },
+                { text: "By monitoring the object's brightness in the sky", correct: false },
 		{ text: "By plotting the NEO's orbital path and analyzing gravitational influences", correct: true },
                 { text: "By using the object's size and speed", correct: false }
             ]
@@ -130,7 +130,7 @@ const questions = {
             ]
         },
 	{
-            question: "What is the primary goal of NASA’s DART (Double Asteroid Redirection Test) mission?",
+            question: "What is the primary goal of NASA's DART (Double Asteroid Redirection Test) mission?",
             answers: [
                 { text: "To destroy a potentially hazardous asteroid", correct: false },
                 { text: "To redirect the path of an asteroid by crashing a spacecraft into it", correct: true },
@@ -145,27 +145,37 @@ const questions = {
 const questionElement = document.getElementById("question");
 const answerButton = document.getElementById("answer-buttons");
 const nextButton = document.getElementById("next-btn");
-const quizLevels = document.getElementById("quiz-levels");
+const quizMenu= document.getElementById("quiz-menu");
 const quizContainer = document.getElementById("quiz-container");
 
 let currentQuestions = [];
 let currentQuestionIndex = 0;
 let score = parseInt(sessionStorage.getItem('score')) || 0;
 
-// Handle level selection
 document.getElementById("beginner-level").addEventListener("click", () => startQuiz("beginner"));
 document.getElementById("intermediate-level").addEventListener("click", () => startQuiz("intermediate"));
 document.getElementById("advanced-level").addEventListener("click", () => startQuiz("advanced"));
 
 function startQuiz(level) {
-    quizLevels.style.display = "none"; // Hide levels
-    quizContainer.style.display = "block"; // Show quiz container
+    quizMenu.style.display = "none";
+    quizContainer.style.display = "block"; 
 
-    currentQuestions = questions[level]; // Set questions based on level
+    currentQuestions = questions[level]; 
     currentQuestionIndex = 0;
     score = 0;
     nextButton.innerHTML = "Next";
-    showQuestion(); // Show the first question
+    showQuestion(); 
+}
+
+// Function to handle text-to-speech
+function speakText(text) {
+    const speech = new SpeechSynthesisUtterance();
+    speech.text = text;
+    speech.lang = 'en-US'; // Set the language to English
+    speech.pitch = 1; // Set pitch (1 is default, higher is more high-pitched)
+    speech.rate = 1; // Set the rate (speed) of speech (1 is default)
+    speech.volume = 1; // Set the volume level (1 is max)
+    window.speechSynthesis.speak(speech); // Trigger the speech synthesis
 }
 
 function showQuestion() {
@@ -173,6 +183,7 @@ function showQuestion() {
     let currentQuestion = currentQuestions[currentQuestionIndex];
     let questionNo = currentQuestionIndex + 1;
     questionElement.innerHTML = questionNo + ". " + currentQuestion.question;
+    speakText(questionNo + ". " + currentQuestion.question); 
 
     currentQuestion.answers.forEach(answer => {
         const button = document.createElement("button");
@@ -182,6 +193,7 @@ function showQuestion() {
         if (answer.correct) {
             button.dataset.correct = answer.correct;
         }
+        speakText(answer.text);
         button.addEventListener("click", selectAnswer);
     });
 }
@@ -198,8 +210,8 @@ function selectAnswer(e) {
     const isCorrect = selectedBtn.dataset.correct === "true";
     if (isCorrect) {
         selectedBtn.classList.add("correct");
-        score += 5; // Add 5 points for a correct answer
-        sessionStorage.setItem('score', score); // Store the updated score in sessionStorage
+        score += 5; 
+        sessionStorage.setItem('score', score);
     } else {
         selectedBtn.classList.add("incorrect");
     }
@@ -215,10 +227,10 @@ function selectAnswer(e) {
 function showScore() {
     resetState();
     const totalQuestions = currentQuestions.length;
-    const totalScore = totalQuestions * 5; // Since each correct answer gives 5 points
-    questionElement.innerHTML = `You scored ${score}/${totalScore} points!`; // Display current score and total possible score
-    nextButton.innerHTML = "Back to Quiz Menu"; // Change button text to indicate navigation
-    nextButton.style.display = "block"; // Show the button
+    const totalScore = totalQuestions * 5;
+    questionElement.innerHTML = `You scored ${score}/${totalScore} points!`; 
+    nextButton.innerHTML = "Back to Quiz Menu"; 
+    nextButton.style.display = "block"; 
 }
 
 function handleNextButton() {
@@ -226,17 +238,28 @@ function handleNextButton() {
     if (currentQuestionIndex < currentQuestions.length) {
         showQuestion();
     } else {
-        showScore(); // Call showScore when all questions have been answered
+        showScore(); 
     }
 }
+function displayCurrentDate() {
+    const dateElement = document.getElementById("quiz-date");
 
-// Update the event listener for the next button
+    const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+    const currentDate = new Date().toLocaleDateString('en-US', options);
+
+    // Display the date in the quiz-date div
+    dateElement.innerHTML = `Today's Quiz: ${currentDate}`;
+}
+
+window.onload = displayCurrentDate;
+
 nextButton.addEventListener("click", () => {
     if (currentQuestionIndex < currentQuestions.length) {
         handleNextButton();
     } else {
-        sessionStorage.setItem('score', score); // Store the score before leaving
-        window.location.href = "2d.html"; // Redirect to 2d.html
+        quizContainer.style.display = "none"; 
+        quizMenu.style.display = "block";
+        sessionStorage.setItem('score', score); 
     }
 });
 
