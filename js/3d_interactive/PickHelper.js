@@ -29,7 +29,7 @@ class PickHelper {
     }
 
     addSprite(scene, position) {
-        var spriteMap = new THREE.TextureLoader().load("assets/textures/moon.jpg");
+        var spriteMap = new THREE.TextureLoader().load("assets/3d_interactive/textures/moon.jpg");
         var spriteMaterial = new THREE.SpriteMaterial({ map: spriteMap });
         var sprite = new THREE.Sprite(spriteMaterial);
         sprite.position.set(position.x, position.y + 20, position.z);
@@ -59,7 +59,7 @@ class PickHelper {
         modal.style.display = "block";
 
         name.innerHTML = AstronomicalBodiesNames[positionX].name + "  ";
-        planetSymbol.src = "./assets/astronomical-symbol/" +
+        planetSymbol.src = "./assets/3d_interactive/astronomical-symbol/" +
                 AstronomicalBodiesNames[positionX].name + "-symbol.png";
         volumeXEarths.innerHTML = AstronomicalBodiesNames[positionX].volumeXEarths;
         orbitDistance.innerHTML = AstronomicalBodiesNames[positionX].orbitDistance;
